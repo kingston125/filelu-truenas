@@ -1,0 +1,12 @@
+{
+  "name": "FileLuCatalog",
+  "preferred_trains": ["stable"],
+  "location": ".",
+  "trains": {
+    "stable": {
+      "filelu": {
+        "path": "./filelu"
+      }
+    }
+  }
+}
