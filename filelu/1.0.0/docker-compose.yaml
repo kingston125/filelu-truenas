@@ -1,0 +1,37 @@
+services:
+  filelu:
+    command: >-
+      mount filelu: /mnt/filelu --vfs-cache-mode full --vfs-cache-max-size 10G
+      --vfs-cache-max-age 12h --vfs-write-back 5s --dir-cache-time 12h
+      --poll-interval 1m --buffer-size 32M --allow-other --allow-non-empty
+      --umask 002
+    environment:
+      FILELU_RCLONE_KEY: "{{ .Values.FILELU_RCLONE_KEY }}"
+      NVIDIA_VISIBLE_DEVICES: void
+      TZ: America/Los_Angeles
+    group_add:
+      - 568
+    image: filelusync/rclone:latest
+    platform: linux/amd64
+    privileged: true
+    pull_policy: missing
+    restart: 'no'
+    stdin_open: false
+    tty: false
+    volumes:
+      - /mnt/tank:/mnt/TrueNAS
+
+volumes:
+  filelu-mount: {}
+
+x-notes: >+
+  # iX App
+
+  ## Bug Reports and Feature Requests
+
+  If you find a bug in this app or have an idea for a new feature, please file
+  an issue at
+
+  https://github.com/truenas/apps
+
+x-portals: []

@@ -1,0 +1,16 @@
+name: filelu
+version: 1.0.0
+description: "FileLu Cloud Rclone Mount App"
+categories:
+  - Storage
+  - Backup
+tags:
+  - rclone
+  - filelu
+maintainers:
+  - name: FileLu Dev Team
+    email: support@filelu.com
+icon: https://filelu.com/images/cloud52.png
+sources:
+  - https://filelu.com
+  - https://hub.docker.com/r/filelusync/rclone

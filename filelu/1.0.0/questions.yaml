@@ -1,0 +1,7 @@
+- variable: FILELU_RCLONE_KEY
+  label: FileLu Rclone Key
+  description: "Enter your FileLu Rclone key to enable cloud access. Get the key at https://filelu.com/account/"
+  schema:
+    type: string
+    required: true
+    private: true
